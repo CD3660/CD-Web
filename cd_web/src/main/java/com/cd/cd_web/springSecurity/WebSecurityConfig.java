@@ -22,6 +22,7 @@ public class WebSecurityConfig {
             authorizationManagerRequestMatcherRegistry
                     .requestMatchers("/api1").hasRole("user")
                     .requestMatchers("/api2").hasRole("admin")
+                    .requestMatchers("/home").hasRole("user")
                     .anyRequest().authenticated();
         }).formLogin(httpSecurityFormLoginConfigurer -> {
             //
