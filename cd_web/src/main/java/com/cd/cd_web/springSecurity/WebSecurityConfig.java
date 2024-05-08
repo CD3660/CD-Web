@@ -25,7 +25,7 @@ public class WebSecurityConfig {
                     .requestMatchers("/home").hasRole("user")
                     .anyRequest().authenticated();
         }).formLogin(httpSecurityFormLoginConfigurer -> {
-            //
+            //로그인 관련된 요소
             httpSecurityFormLoginConfigurer
                     .usernameParameter("cksdud4188")
                     .passwordParameter("0000")
